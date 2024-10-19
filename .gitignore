@@ -1,0 +1,101 @@
+# 忽略Python的字节码文件  
+*.pyc  
+__pycache__/  
+  
+tess_*
+*.PNG
+# 忽略大多数IDE和编辑器生成的文件  
+.idea/  
+.DS_Store  
+.env  
+.venv/  
+env/  
+venv/  
+.env.*  
+.python-version  
+.venv  
+bin/  
+include/  
+lib/  
+lib64/  
+share/  
+pretrained/
+model/
+pip-wheel-metadata/  
+  
+# 忽略虚拟环境目录  
+venv/  
+.venv/  
+env/  
+  
+# 忽略Python的虚拟环境文件  
+.env.local  
+.env.development  
+.env.test  
+.env.production  
+  
+# 忽略一些日志和临时文件  
+*.log  
+*.tmp  
+*.pid  
+*.egg-info/  
+dist/  
+build/  
+*.egg  
+*.egg-link  
+.installed.cfg  
+*.pyc.swp  
+  
+# 忽略数据库迁移文件  
+migrations/  
+  
+# 忽略一些大型文件或目录，例如数据集或缓存  
+data/  
+node_modules/  
+  
+# 忽略Jupyter Notebook的检查点  
+.ipynb_checkpoints/  
+  
+# 忽略其他可能生成的临时文件  
+*.swp  
+*.swo  
+*.swo~  
+*.swp~  
+*~  
+.DS_Store  
+.AppleDouble  
+.LSOverride  
+  
+# 忽略IDEA项目文件  
+.idea/  
+*.iml  
+  
+# 忽略PyCharm项目文件  
+.idea/  
+*.idea/  
+*.ipr  
+.pydevproject  
+  
+# 忽略Visual Studio Code项目文件  
+.vscode/  
+*.code-workspace  
+  
+# 忽略其他IDE和文本编辑器的临时文件  
+._*  
+*.sublime-workspace  
+*.sublime-project  
+.vscode/  
+.ropeproject/  
+.project  
+.classpath  
+.settings/  
+  
+# 忽略测试覆盖率报告  
+.coverage  
+.coverage.*  
+cover/  
+  
+# 忽略其他可能的临时文件  
+.tox/  
+.mypy_cache/  
+.pytest_cache/

@@ -1,0 +1,14 @@
+{  
+    "[python]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "charliermarsh.ruff",
+        "editor.codeActionsOnSave": {
+        "source.fixAll": "explicit",
+        "source.organizeImports": "explicit"
+        },
+    },
+    "cSpell.words": [
+        "jiaotu", "pytesseract", "onefile", "PyPDF2", "langchain", "dotenv",
+        "pipx", "virtualenv", "ensurepath"
+    ]
+}
