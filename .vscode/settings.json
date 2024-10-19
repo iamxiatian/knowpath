@@ -9,6 +9,6 @@
     },
     "cSpell.words": [
         "jiaotu", "pytesseract", "onefile", "PyPDF2", "langchain", "dotenv",
-        "pipx", "virtualenv", "ensurepath"
+        "pipx", "virtualenv", "ensurepath", "dotenv"
     ]
 }

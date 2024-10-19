@@ -25,6 +25,16 @@ pipx ensurepath
 
 ### 工程导入
 
+如果系统默认的Python版本低于3.11，则需要执行以下命令：
+
+```shell
+conda create -n py311 python=3.11.1
+conda activate py311
+#which python
+#poetry env use /path/to/your/python
+poetry env use `which python`
+```
+
 安装依赖
 
 ```shell
