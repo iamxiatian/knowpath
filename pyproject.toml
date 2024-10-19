@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "knowpath"
+version = "1.0"
+description = ""
+authors = ["XiaTian <xiat@ruc.edu.cn>"]
+readme = "README.md"
+packages = [
+    { include = "knowpath" }
+]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+langchain = "^0.3.1"
+
+[[tool.poetry.source]]
+name = "ali"
+url = "https://mirrors.aliyun.com/pypi/simple"
+
+
+[tool.poetry.group.dev.dependencies]
+ipykernel = "^6.29.5"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
