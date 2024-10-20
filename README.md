@@ -57,6 +57,21 @@ poetry env info --path
 poetry add pyhocon
 ```
 
+对于torch，由于需要指定--index-url，在poetry中用以下方式实现：
+
+注意：‌‌CUDA 12.0对应的PyTorch版本是CUDA 11.8。‌
+
+```shell
+poetry source add --priority=explicit pytorch-gpu https://download.pytorch.org/whl/cu118
+#poetry source add --priority=explicit pytorch-gpu https://mirrors.aliyun.com/pytorch-wheels/cu118
+poetry add --source pytorch-gpu torch torchvision torchaudio
+```
+
+### 删除依赖包
+```shell
+poetry add pyhocon
+```
+
 ### 运行脚本
 
 首次运行脚本之前，首先需要激活poetry的shell环境，在当前工程目录下执行：
@@ -85,3 +100,20 @@ coverage report
 ```shell
 python setup.py build_ext --inplace
 ```
+## LLM
+
+### 模型下载
+
+以Qwen2.5-7B-Instruct为例，相关信息可以访问：
+https://www.modelscope.cn/models/AI-ModelScope/Qwen2.5-7B-Instruct/summary
+
+点击“模型文件”选项卡，右侧有“下载模型”，可以根据说明下载。以命令行下载为例：
+
+```shell
+pip install modelscope
+modelscope download --model AI-ModelScope/Qwen2.5-7B-Instruct --local_dir './Qwen2.5-7B-Instruct'
+```
+
+则在运行命令所在文件夹下，自动创建Qwen2.5-7B-Instruct目录，并存放模型信息。
+
+### 工具调用

@@ -12,11 +12,24 @@ packages = [
 python = "^3.10"
 langchain = "^0.3.1"
 python-dotenv = "^1.0.1"
+transformers = "^4.45.2"
+accelerate = "^1.0.1"
+torch = {version = "^2.5.0+cu118", source = "pytorch-gpu"}
+torchvision = {version = "^0.20.0+cu118", source = "pytorch-gpu"}
+torchaudio = {version = "^2.5.0+cu118", source = "pytorch-gpu"}
+faiss-gpu = "^1.7.2"
+langchain-community = "^0.3.3"
 
 [[tool.poetry.source]]
 name = "ali"
 url = "https://mirrors.aliyun.com/pypi/simple"
+priority = "primary"
 
+
+[[tool.poetry.source]]
+name = "pytorch-gpu"
+url = "https://download.pytorch.org/whl/cu118"
+priority = "explicit"
 
 [tool.poetry.group.dev.dependencies]
 ipykernel = "^6.29.5"
