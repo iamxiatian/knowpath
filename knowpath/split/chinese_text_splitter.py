@@ -1,3 +1,4 @@
+import os
 import re
 from typing import List
 
@@ -75,3 +76,15 @@ class ChineseTextSplitter(CharacterTextSplitter):
         splitter = ChineseTextSplitter(pdf=False)
         docs = loader.load_and_split(splitter)
         return docs
+
+    def write_check_file(filepath, docs):
+        folder_path = os.path.join(os.path.dirname(filepath), "tmp_files")
+        if not os.path.exists(folder_path):
+            os.path.makedirs(folder_path)
+        fp = os.path.join(folder_path, "load_file.txt")
+        with open(fp, "a+", encoding="utf-8") as fout:
+            fout.write(f"filepath={filepath}, len={len(docs)}")
+            fout.write("\n")
+            for doc in docs:
+                fout.write(str(doc))
+                fout.write("\n")

@@ -112,6 +112,9 @@ https://www.modelscope.cn/models/AI-ModelScope/Qwen2.5-7B-Instruct/summary
 ```shell
 pip install modelscope
 modelscope download --model AI-ModelScope/Qwen2.5-7B-Instruct --local_dir './Qwen2.5-7B-Instruct'
+modelscope download --model AI-ModelScope/Llama-3.2-3B-Instruct --local_dir './Llama-3.2-3B-Instruct'
+modelscope download --model AI-ModelScope/bge-large-zh-v1.5  --local_dir './bge-large-zh-v1.5'
+modelscope download --model AI-ModelScope/bge-large-en-v1.5  --local_dir './bge-large-en-v1.5'
 ```
 
 则在运行命令所在文件夹下，自动创建Qwen2.5-7B-Instruct目录，并存放模型信息。
