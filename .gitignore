@@ -1,7 +1,8 @@
 # 忽略Python的字节码文件  
 *.pyc  
 __pycache__/  
-  
+nohup.out
+
 tess_*
 *.PNG
 # 忽略大多数IDE和编辑器生成的文件  

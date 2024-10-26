@@ -119,4 +119,25 @@ modelscope download --model AI-ModelScope/bge-large-en-v1.5  --local_dir './bge-
 
 则在运行命令所在文件夹下，自动创建Qwen2.5-7B-Instruct目录，并存放模型信息。
 
+
+### vLLM推理服务
+
+vLLM对Torch有强依赖，为避免包冲突，采用在线模式，单独安装一个虚拟环境，启动vllm。
+vllm的服务不放置在pyproject.toml中管理。
+
+vLLM安装如下（https://docs.vllm.ai/en/latest/getting_started/quickstart.html）：
+
+```shell
+# (Recommended) Create a new conda environment.
+conda create -n my_vllm python=3.10 -y
+conda activate my_vllm
+
+# Install vLLM with CUDA.
+pip install vllm
+
+# 指定显卡并启动
+export CUDA_VISIBLE_DEVICES=6,7
+vllm serve Qwen2.5-7B-Instruct --config conf/vllm.yaml
+```
+
 ### 工具调用

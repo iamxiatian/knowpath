@@ -1,0 +1,5 @@
+host: "127.0.0.1"
+port: 1119
+dtype: "auto"
+quantization: "fp8"
+uvicorn-log-level: "info"
