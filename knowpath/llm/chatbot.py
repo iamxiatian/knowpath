@@ -59,7 +59,6 @@ class Chatbot:
                 "max_tokens": max_tokens,
                 "temperature": temperature,
                 "skip_special_tokens": skip_special_tokens,
-                "ignore_eos": True,
             }
         )
         headers = {"Content-Type": "application/json"}
@@ -109,7 +108,6 @@ class Chatbot:
                 "repetition_penalty": repetition_penalty,
                 "max_tokens": max_tokens,
                 "skip_special_tokens": skip_special_tokens,
-                "ignore_eos": True,
             }
         )
         headers = {"Content-Type": "application/json"}
