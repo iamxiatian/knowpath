@@ -14,11 +14,21 @@ langchain = "^0.3.1"
 python-dotenv = "^1.0.1"
 transformers = "^4.45.2"
 accelerate = "^1.0.1"
+langchain-community = "^0.3.3"
+gym = "^0.26.2"
+
+[tool.poetry.group.cpu.dependencies]
+torch = {version = "^2.5.0"}
+torchvision = {version = "^0.20.0"}
+torchaudio = {version = "^2.5.0"}
+faiss-cpu = "^1.9.0"
+
+
+[tool.poetry.group.gpu.dependencies]  
 torch = {version = "^2.5.0+cu118", source = "pytorch-gpu"}
 torchvision = {version = "^0.20.0+cu118", source = "pytorch-gpu"}
 torchaudio = {version = "^2.5.0+cu118", source = "pytorch-gpu"}
 faiss-gpu = "^1.7.2"
-langchain-community = "^0.3.3"
 
 [[tool.poetry.source]]
 name = "ali"

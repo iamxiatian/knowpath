@@ -3,3 +3,4 @@ port: 1119
 dtype: "auto"
 quantization: "fp8"
 uvicorn-log-level: "info"
+seed: 1119

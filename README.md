@@ -25,6 +25,8 @@ pipx ensurepath
 
 ### 工程导入
 
+#### 可选步骤
+
 如果系统默认的Python版本低于3.11，则需要执行以下命令：
 
 ```shell
@@ -35,11 +37,21 @@ conda activate py311
 poetry env use `which python`
 ```
 
-安装依赖
+#### 安装依赖
+
+GPU环境下安装：
 
 ```shell
-poetry install
+poetry install --with gpu
 ```
+
+CPU环境下安装：
+
+```shell
+poetry install --with cpu
+```
+
+#### vscode配置
 
 查看env的位置，并在vscode中选择“Enter Interpreter path...”部分，输入如下命令显示的路径：
 
@@ -49,7 +61,9 @@ poetry env info --path
 
 通过以上步骤即可完成虚拟环境的创建和选择。
 
-### 增加依赖包
+### 常用操作
+
+#### 增加依赖包
 
 如需添加包，必须通过审核后方可提交，包的添加方式，以pyhocon为例，如下：
 
@@ -67,12 +81,12 @@ poetry source add --priority=explicit pytorch-gpu https://download.pytorch.org/w
 poetry add --source pytorch-gpu torch torchvision torchaudio
 ```
 
-### 删除依赖包
+#### 删除依赖包
 ```shell
 poetry add pyhocon
 ```
 
-### 运行脚本
+#### 运行脚本
 
 首次运行脚本之前，首先需要激活poetry的shell环境，在当前工程目录下执行：
 
@@ -86,7 +100,7 @@ poetry shell
 poetry run python start.py
 ```
 
-### 单元测试覆盖率
+#### 单元测试覆盖率
 
 用pip安装coveragepy后，执行：
 
@@ -115,6 +129,7 @@ modelscope download --model AI-ModelScope/Qwen2.5-7B-Instruct --local_dir './Qwe
 modelscope download --model AI-ModelScope/Llama-3.2-3B-Instruct --local_dir './Llama-3.2-3B-Instruct'
 modelscope download --model AI-ModelScope/bge-large-zh-v1.5  --local_dir './bge-large-zh-v1.5'
 modelscope download --model AI-ModelScope/bge-large-en-v1.5  --local_dir './bge-large-en-v1.5'
+modelscope download --model LLM-Research/Llama-3.2-11B-Vision-Instruct  --local_dir './Llama-3.2-11B-Vision-Instruct'
 ```
 
 则在运行命令所在文件夹下，自动创建Qwen2.5-7B-Instruct目录，并存放模型信息。
